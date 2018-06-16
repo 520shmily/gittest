@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>灵活的框</title>
+</head>
+<style>
+	body{
+		padding: 0;
+		margin: 0;
+		/*background-color: #758D9D;*/
+		/*background-image: url(img/bc.png);
+		background-repeat: no-repeat;*/
+	}
+	.box{
+		margin: 0 auto;
+		height: auto;
+		width: 100%;
+		position: relative;
+	}
+	.box::before{
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 20px;
+		position: absolute;
+		left: 0;
+		background: url(img/left.gif) repeat-y;
+		z-index: -1
+	}
+	.box::after{
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 20px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: url(img/right.gif) repeat-y;
+		z-index: -1
+	}
+	.box-top{
+		height: 20px;
+		width: 100%;
+		position: relative;
+		background: url(img/top.gif) repeat-x;
+	}
+	.box-top::before{
+		content: "";
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		left: 0;
+		background: url(img/top-left.gif) no-repeat right;
+	}
+	.box-top::after{
+		content: "";
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		right: 0;
+		background: url(img/top-right.gif) no-repeat right;
+	}
+	.box-bottom{
+		height: 20px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		background: url(img/bottom.gif) repeat-x;
+	}
+	.box-bottom::before{
+		content: "";
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		left: 0;
+		background: url(img/bottom-left.gif) no-repeat right;
+	}
+	.box-bottom::after{
+		content: "";
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		right: 0;
+		background: url(img/bottom-right.gif) no-repeat right;
+	}
+	.box-content h2,.box-content p{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.box-content p{
+		padding-bottom: 30px;
+	}
+</style>
+<body>
+	<div class="box">
+		<div class="box-top"></div>
+		<div class="box-content">
+			<h2>这是标题</h2>
+			<p>这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本
+			文本这是文本这是文本
+		这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本这是文本
+			文本这是文本这是文本</p>
+		</div>
+		<div class="box-bottom"></div>
+	</div>
+</body>
+</html>
